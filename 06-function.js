@@ -52,3 +52,28 @@ const f1 = function()   {
 }   //  매개변수 X, 리턴 O
 console.log(f1());
 const f1_arrow = () => "hello";
+console.log(f1_arrow())
+
+const f2 = function(name)   {
+    return "Hello, " + name;
+}   //  매개변수 O, 리턴 O
+console.log(f2("홍길동"));
+
+const f2_arrow = name => "Hello, " + name;
+console.log(f2_arrow("홍길동"));
+
+const f3 = function(a,b)    {
+    return a+b; 
+}
+console.log(f3(10, 20));
+const f3_arrow = (a, b) => {    //  여러 개의 로직 수행할 때 -> 블록({})을 잡을 수 있다
+    //  블록이 잡히면 return 문을 생락할 수 없다
+    console.log("화살표 함수");
+   return a + b;
+};
+
+//  콜백 함수에 화살표 함수로 계산식 정의
+calculator(10, 20, (v1,v2) => v1 + v2);
+calculator(10, 20, (v1,v2) => v1 * v2);
+
+//  콜백 함수 활용 -> Array 추가 강의

@@ -65,4 +65,8 @@ console.log("m1:", m1);
 //  기존 객체에도 동적으로 속성 추가 가능
 
 // String 객체 -sayHi 메서드
-String.prototype
+String.prototype.sayHi = function() {
+    return `안녕하세요, ${this}님`
+}
+
+console.log("둘리".sayHi());
